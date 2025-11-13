@@ -1,0 +1,22 @@
+model:
+  repo_id: "your-org/your-t2v-checkpoint"
+  unet_target_modules: ["to_q","to_k","to_v","proj_out"]
+  text_encoder_lora: false
+training:
+  epochs: 1
+  lr: 1e-4
+  batch_size: 1
+  grad_accum: 8
+  mixed_precision: "fp16"
+  max_frames: 24
+  save_every: 500
+  output_dir: "checkpoints/lora"
+loss:
+  param_type: "epsilon"   # epsilon | velocity | x0
+  snr_weighting: true
+  dynamic_threshold: true
+data:
+  train_list: "data/train_list.txt"
+  fps: 12
+  frame_stride: 2
+  random_truncate: true
