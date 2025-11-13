@@ -1,0 +1,8 @@
+eval:
+  prompts_file: "eval/prompts.txt"
+  metrics: ["clip_text","flicker_rate"]
+  output_csv: "eval/results.csv"
+  seed: 1234
+  sampler_set:
+    - {type: dpmpp_2m, steps: 20, sigma_schedule: karras}
+    - {type: euler, steps: 30, sigma_schedule: linear}
