@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.env
+.venv
+venv/
+build/
+dist/
+
+# Data / Outputs
+outputs/
+logs/
+checkpoints/
+wandb/
+*.mp4
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Cache
+.cache/
